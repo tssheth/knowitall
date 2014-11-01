@@ -17,7 +17,7 @@ function myGetElementsByClassName(selector) {
     }
     return returnList;
 }
-
+ 
 var rssReader = {
     containers: NULL,
     
@@ -27,6 +27,8 @@ var rssReader = {
             var rssUrl = containers[i].getAttribute('rssUrl');
             var rssNum = containers[i].getAttribute('rssNum');
             var id = containers[i].getAttribute('id');
+            
+            var url = encodeURIComponent
         }
     }
 }
