@@ -1,4 +1,4 @@
-knowitall
+Know It All
 =========
 
 Chrome Extension
