@@ -29,7 +29,7 @@
     }
   },
   "chrome_url_overrides": {
-	"newtab": "home.html"
+	"newtab": "home.xhtml"
 	},
   "commands": ...,
   "content_pack": ...,
