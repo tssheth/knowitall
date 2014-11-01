@@ -9,6 +9,6 @@
     "newtab": "home.html"
   },
   "permissions": [
-    "https://secure.flickr.com/"
+    "storage"
   ]
 }

@@ -9,7 +9,8 @@ body{background:#eee;margin:0;padding:0}
     margin: 5px;
     width: 350px;
     border:1px solid #444;
-    
+    height: 400px;
+    overflow: scroll;
 }
 .post_results ul {
     list-style:none;
