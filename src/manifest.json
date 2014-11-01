@@ -6,7 +6,7 @@
   "version": "1.0",
 
   "chrome_url_overrides" : {
-    "newtab": "home.xhtml"
+    "newtab": "home.html"
   },
   "permissions": [
     "https://secure.flickr.com/"
