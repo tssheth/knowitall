@@ -79,3 +79,15 @@ h1 {
     margin-left: 40px;
     margin-right: 40px;
 }
+#img {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    right: 0px;
+    bottom: 7px;
+    opacity: 0.5;
+}
+
+#img:hover{
+    opacity: 1.0;
+}
