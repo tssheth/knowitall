@@ -81,7 +81,6 @@ var rssReader = {
 };
 
 window.onload = function() {
-    gatherData();
     rssReader.init('post_results');
     resize();
 }
