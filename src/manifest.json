@@ -11,6 +11,8 @@
   },
   "permissions": [
     "storage",
-    "tabs"
+    "tabs",
+    "webRequest",
+    "webNavigation"
   ]
 }
