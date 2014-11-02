@@ -2,6 +2,44 @@
 YHack 2014
 */
 
+::-webkit-scollbar {
+    display: none;
+}
+
+html {
+    background: #F7393B;
+}
+
+body {
+    background: white;
+    margin:0;
+    padding:0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    overflow: scroll;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.container {
+    color: #535353;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#h1 {
+    color: #3C3C3C;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+}
+
 #fail {
     display: none;
 }
