@@ -1,13 +1,14 @@
 var results = document.getElementsByClassName('post_results');
 
 function resizeY() {
-    var height = window.innerHeight - 50;
+    var height = window.innerHeight - 90;
     for(var k = 0; k < results.length; k++) {
         results[k].style.height = height+'px';
     }    
 }
 
 function resizeX() {
+    var container = document.getElementById('container');
     var width = window.innerWidth;
     var listItems = document.getElementsByTagName('li');
     
@@ -17,7 +18,6 @@ function resizeX() {
             
             results[i].style.width = '280px';
             results[i].style.height = '350px';
-            results[i].style.margin = "1px";
         }
     }
     if(width >= 1165) {
@@ -25,7 +25,6 @@ function resizeX() {
             listItems[i].style.height = '60px';
             
             results[i].style.width = '350px';
-            results[i].style.margin = "5px";
         } 
     }
 }

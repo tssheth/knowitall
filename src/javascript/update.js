@@ -15,7 +15,28 @@ links['mlb'] = 'http://mlb.mlb.com/partnerxml/gen/news/rss/mlb.xml';
 links['nfl'] = 'http://www.nfl.com/rss/rsslanding?searchString=home';
 links['nba'] = 'http://www.nba.com/rss/nba_rss.xml';
 links['nhl'] = 'http://www.nhl.com/rss/news.xml';
-links['bloomberg'] = 
+links['cnnmoney'] = 'http://rss.cnn.com/rss/money_topstories.rss';
+links['yahoofinance'] = 'http://finance.yahoo.com/rss/topfinstories';
+links['cnbc'] = 'http://www.cnbc.com/id/10000664/device/rss/rss.html';
+links['forbes'] = 'http://www.forbes.com/markets/feed/';
+links['marketwatch'] = 'http://feeds.marketwatch.com/marketwatch/topstories?format=xml';
 
-function update(choice) {    
+var selectors = document.getElementsByClassName('select');
+
+function updateNews() {
+    var choice = document.getElementById('newsSelect').selectedIndex;
+    document.getElementById("news").setAttribute("rss_url", links[choice]);
 }
+
+function updateSports() {
+    
+}
+
+function updateMarket(){
+    
+}
+
+function update() {    
+     
+}
+
