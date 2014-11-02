@@ -8,21 +8,21 @@ YHack 2014
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/home.css">
-        <script scr="javascript/toggle.js"></script>
-        <script scr="javascript/resize.js"></script>
+        <script src="javascript/toggle.js"></script>
+        <script src="javascript/resize.js"></script>
         <script src="javascript/homejs.js"></script>
     </head>
     
     <body>
     <div class="container">
         <div class="subcontainer">
-            <div class="post_results" id="news" rss_url="http://rss.news.yahoo.com/rss/topstories" rss_num= "30">
+            <div class="post_results" id="news" rss_url="http://rss.news.yahoo.com/rss/topstories" rss_num= "45">
                 <div class="loading">
                     <img src="images/loading.gif">
                 </div>
             </div>
             <br>
-            <select class="post_select">
+            <select class="post_select" onselect="update(this)">
                 <option class="select">Select A News Station</option>
                 <option id="cnn">CNN</option>
                 <option id="bbc">BBC News</option>
@@ -34,13 +34,13 @@ YHack 2014
             </select>
 	</div>	
         <div class="subcontainer">
-            <div class="post_results" id="sports" rss_url="http://rss.news.yahoo.com/rss/topstories" rss_num= "30">
+            <div class="post_results" id="sports" rss_url="http://rss.news.yahoo.com/rss/topstories" rss_num= "45">
                 <div class="loading">
                     <img src="images/loading.gif">
                 </div>
             </div>
             <br>
-            <select class="select">
+            <select class="select" onselect="update(this)">
                 <option class="select">Select a Sports Station</option>
                 <option id="espn">ESPN</option>
                 <option id="yahoosports">Yahoo Sports</option>
@@ -52,13 +52,13 @@ YHack 2014
             </select>
         </div>
         <div class="subcontainer">
-            <div class="post_results" id="stock" rss_url="http://rss.news.yahoo.com/rss/topstories" rss_num= "30">
+            <div class="post_results" id="stock" rss_url="http://rss.news.yahoo.com/rss/topstories" rss_num= "45">
                 <div class="loading">
                     <img src="images/loading.gif">
                 </div>
             </div>
             <br>
-            <select class="select">
+            <select class="select" onselect="update(this)">
                 <option class="select">Select A Stock Market Station</option>
                 <option id="bloomberg">Bloomberg</option>
                 <option id="cnnmoney">CNN Money</option>

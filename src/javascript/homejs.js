@@ -82,4 +82,8 @@ var rssReader = {
 
 window.onload = function() {
     rssReader.init('post_results');
+    resize();
 }
+window.addEventListener('resize', function(event){
+    resize();
+});

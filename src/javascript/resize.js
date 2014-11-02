@@ -1,31 +1,34 @@
-/* 
- * YHack 2014
- */
+var results = document.getElementsByClassName('post_results');
 
-var resultElementArray = document.getElementsByClassName('post_results');
-var numberOfElements = resultElementArray.length;
-var elementWidth = resultElementArray[0].style.width;
+function resizeY() {
+    var height = window.innerHeight - 50;
+    for(var k = 0; k < results.length; k++) {
+        results[k].style.height = height+'px';
+    }    
+}
 
-function getBrowserWidth() {
-    if (self.innerHeight) {
-        return self.innerWidth;
-    }
+function resizeX() {
+    var width = window.innerWidth;
+    var listItems = document.getElementsByTagName('li');
     
-    if (document.documentElement && document.documentElement.clientHeight) {
-        return document.documentElement.clientWidth;
+    if(width < 1165) {
+        for(var i = 0; i < listItems.length; i++) {
+            listItems[i].style.height = '85px';
+            
+            results[i].style.width = '280px';
+            results[i].style.height = '350px';
+        }
     }
-    
-    if (document.body) {
-        return document.body.clientWidth;
+    if(width >= 1165) {
+       for(var i = 0; i < listItems.length; i++) {
+            listItems[i].style.height = '60px';
+            
+            results[i].style.width = '350px';
+        } 
     }
 }
 
 function resize() {
-    var browserWidth = getBrowswerWidth;
-    
-    if (browserWidth < (elementWidth * numberOfElements + numberOfElements * 40)) {
-        for (var i = 0; i <= numberOfElements; i++) {
-            resultElementArray[i].setProperty('rss_num', "4");
-        }
-    }
+    resizeY();
+    resizeX();
 }
