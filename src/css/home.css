@@ -19,17 +19,22 @@ h1 {
 }
 
 .post_results {
+    overflow: scroll;
     margin: 5px;
     margin-top: 0px;
     width: 350px;
     border:2px #FFF;
     height: 400px;
-    overflow: hidden;
     border-radius: 12px;
     border-style: solid;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: #535353;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 .post_results ul {
     list-style:none;
     text-align:left;
