@@ -11,14 +11,14 @@ YHack 2014
         <script src="javascript/moreInputsStart.js"></script>
         <script src="javascript/save.js"></script>
     </head>
+    
     <body>
         <div class="container">
-            <h2>Choose your preferences!</h2>
-            <br/> 
+            <h1 id="h1">Choose your news.</h1>
             <span class="failure" id="fail">Please select all of the fields.</span>
             <div id="forms">
                 <div class="input">
-                    <p>What news provider would you like?</p>
+                    <p>Select News Network</p>
                     <select id="news" class="select">
                         <option class="select">Select News Network</option>
                         <option id="cnn">CNN</option>
@@ -32,7 +32,7 @@ YHack 2014
                 </div>
                 <br />
                 <div class="input">  
-                    <p>What sports provider would you like?</p>
+                    <p>Select Sports Network</p>
                     <select id="sports" class="select">
                         <option class="select">Select Sports Network</option>
                         <option id="espn">ESPN</option>
@@ -46,7 +46,7 @@ YHack 2014
                 </div>
                 <br />
                 <div class="input">
-                    <p>What Market Provider would you like?</p>
+                    <p>Select Stock Market Network</p>
                     <select id="market" class="select">
                         <option class="select">Select Stock Market Network</option>
                         <option id="cnnmoney">CNN Money</option>
@@ -57,6 +57,7 @@ YHack 2014
                         <option id="none">None</option>
                     </select>
                 </div>
+                    <br/>
                 <div class="genericInput" id="genericInputMaster">
                     RSS Address: <input type="text" name="input">&nbsp;<button id="remove" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Remove URL</button>
                     <br/>
