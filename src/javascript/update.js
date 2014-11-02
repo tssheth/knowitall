@@ -26,6 +26,7 @@ var selectors = document.getElementsByClassName('select');
 function updateNews() {
     var choice = document.getElementById('newsSelect').selectedIndex;
     document.getElementById("news").setAttribute("rss_url", links[choice]);
+    alert(choice);   
 }
 
 function updateSports() {
