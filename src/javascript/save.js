@@ -20,6 +20,19 @@ function tryAgain() {
     
 }
 
+function getNonNormal() {
+    var urls = new Array();
+    document.getElementById("genericInputMaster").setAttribute("class", "hidden");
+    var nonNormal = document.getElementsByClassName("genericInput");
+    for (var i = 0; i < nonNormal.length + 15; i++) {
+        var current = nonNormal[i];
+        if (current !== null) {
+            urls[urls.length] = current;
+        }
+    }
+    return urls;
+}
+
 function save() {
     var news = selected(newsArray);
     var sports = selected(sportsArray);
@@ -30,13 +43,14 @@ function save() {
         return;
     }
     else {
-        chrome.storage.local.set({
-            "news": news,
-            "sports": sports,
-            "market": market
-        }, function() {
-            message("Your have been saved.");
-            window.location.replace("home.html");
-        });
+        var alienValues = getNonNormal();
+        var storage = chrome.storage.local;
+        
+        storage.set({"news": news});
+        storage.set({"sports": sports});
+        storage.set({"market": market});
+        storage.set({"userLists": alienValues});
+        
+        window.location.href = "home.html";
     }
 }
