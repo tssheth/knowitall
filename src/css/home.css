@@ -6,6 +6,7 @@ body{background:#F7393B;margin:0;padding:0}
 
 .post_results {
     margin: 5px;
+    margin-top: 40px;
     width: 350px;
     border:2px #FFF;
     height: 400px;

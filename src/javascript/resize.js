@@ -17,6 +17,7 @@ function resizeX() {
             
             results[i].style.width = '280px';
             results[i].style.height = '350px';
+            results[i].style.margin = "1px";
         }
     }
     if(width >= 1165) {
@@ -24,6 +25,7 @@ function resizeX() {
             listItems[i].style.height = '60px';
             
             results[i].style.width = '350px';
+            results[i].style.margin = "5px";
         } 
     }
 }
