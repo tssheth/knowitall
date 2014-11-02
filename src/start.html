@@ -3,8 +3,11 @@
 YHack 2014
 -->
 <html>
+    
+    <h1 id="h1">knowitall</h1>
+    
     <head>
-        <title>Know It All Setup</title>
+        <title>knowitall Setup</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/start.css">
@@ -14,7 +17,7 @@ YHack 2014
     
     <body>
         <div class="container">
-            <h1 id="h1">Choose your news.</h1>
+            <h2 id="h2">Choose your news.</h2>
             <span class="failure" id="fail">Please select all of the fields.</span>
             <div id="forms">
                 <div class="input">
@@ -30,7 +33,7 @@ YHack 2014
                         <option id="none">None</option>
                     </select>
                 </div>
-                <br />
+                <br>
                 <div class="input">  
                     <p>Select Sports Network</p>
                     <select id="sports" class="select">
@@ -44,7 +47,7 @@ YHack 2014
                         <option id="none">None</option>
                     </select>
                 </div>
-                <br />
+                <br>
                 <div class="input">
                     <p>Select Stock Market Network</p>
                     <select id="market" class="select">
@@ -57,16 +60,17 @@ YHack 2014
                         <option id="none">None</option>
                     </select>
                 </div>
-                    <br/>
+                <br>
                 <div class="genericInput" id="genericInputMaster">
-                    RSS Address: <input type="text" name="input">&nbsp;<button id="remove" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Remove URL</button>
-                    <br/>
+                    RSS Address: <input type="text" name="input">&nbsp;<button id="remove" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Remove RSS feed</button>
+                    <br>
                 </div>
                 <span id="write"></span>
-                <br />
+                <br>
+                <br>
                 <div id="buttons">
-                    <button id="addAnotherForm" onclick="moreForms()">Add A Custom URL</button>
-                    <br />
+                    <button id="addAnotherForm" onclick="moreForms()">Add a RSS feed</button>
+                    <br>
                     <button id="save" onclick="save()">Save Preferences</button>
                 </div>
             </div>

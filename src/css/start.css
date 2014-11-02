@@ -8,6 +8,18 @@ YHack 2014
 
 html {
     background: #F7393B;
+    margin-top: 60px;
+    padding-top: 60px;
+}
+
+#h1 {
+    text-align: center;
+    text-transform: lowercase;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 49px;
+    font-weight: normal;
+    letter-spacing: 0.05em;
 }
 
 body {
@@ -16,7 +28,7 @@ body {
     padding:0;
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
+    width: 425px;
     overflow: scroll;
     border-radius: 12px;
     text-align: center;
@@ -33,7 +45,7 @@ body {
     padding-bottom: 10px;
 }
 
-#h1 {
+#h2 {
     color: #3C3C3C;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 30px;
@@ -46,4 +58,14 @@ body {
 
 #genericInputMaster {
     display: none;
+}
+
+#addAnotherForm {
+    display:block;
+    margin:0px auto;
+}
+
+#save {
+    display:block;
+    margin:0px auto;
 }
