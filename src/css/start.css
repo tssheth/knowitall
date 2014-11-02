@@ -8,7 +8,7 @@ YHack 2014
 
 html {
     background: #F7393B;
-    margin-top: 60px;
+    margin-top: 30px;
     padding-top: 60px;
 }
 
@@ -20,21 +20,24 @@ html {
     font-size: 49px;
     font-weight: normal;
     letter-spacing: 0.05em;
+    margin-top: -80px;
 }
 
 body {
-    background: white;
+/*    background: white;*/
     margin:0;
     padding:0;
     margin-left: auto;
     margin-right: auto;
     width: 425px;
     overflow: scroll;
-    border-radius: 12px;
+    /*border-radius: 12px;*/
     text-align: center;
 }
 
 .container {
+    background: white;
+    border-radius: 12px;
     color: #535353;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 20px;
