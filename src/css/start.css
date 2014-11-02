@@ -8,7 +8,7 @@ YHack 2014
 
 html {
     background: #F7393B;
-    margin-top: 30px;
+    margin-top: 40px;
     padding-top: 60px;
 }
 
@@ -53,6 +53,7 @@ body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 30px;
     font-weight: normal;
+    text-align: center;
 }
 
 #fail {
@@ -71,4 +72,8 @@ body {
 #save {
     display:block;
     margin:0px auto;
+}
+
+#your {
+    color: #F7393B;
 }
