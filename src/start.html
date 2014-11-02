@@ -7,11 +7,15 @@ YHack 2014
         <title>Know It All Setup</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/start.css">
+        <script src="javascript/moreInputsStart.js"></script>
+        <script src="javascript/save.js"></script>
     </head>
     <body>
         <div class="container">
             <h2>Choose your preferences!</h2>
             <br/> 
+            <span class="failure" id="fail">Please select all of the fields.</span>
             <div id="forms">
                 <div class="input">
                     <p>What news provider would you like?</p>
@@ -27,7 +31,7 @@ YHack 2014
                     </select>
                 </div>
                 <br />
-                <div class="input">                
+                <div class="input">  
                     <p>What sports provider would you like?</p>
                     <select id="sports" class="select">
                         <option class="select">Select Sports Network</option>
@@ -53,7 +57,17 @@ YHack 2014
                         <option id="none">None</option>
                     </select>
                 </div>
+                <div class="genericInput" id="genericInputMaster">
+                    RSS Address: <input type="text" name="input">&nbsp;<button id="remove" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Remove URL</button>
+                    <br/>
+                </div>
+                <span id="write"></span>
                 <br />
+                <div id="buttons">
+                    <button id="addAnotherForm" onclick="moreForms()">Add A Custom URL</button>
+                    <br />
+                    <button id="save" onclick="save()">Save Preferences</button>
+                </div>
             </div>
         </div>
     </body>

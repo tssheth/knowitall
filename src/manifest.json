@@ -2,8 +2,9 @@
   "manifest_version": 2,
 
   "description": "Chrome extension news feed",
-  "name": "Knowitall",
+  "name": "knowitall",
   "version": "1.0",
+  "minimum_chrome_version": "20",
 
   "chrome_url_overrides" : {
     "newtab": "home.html"
