@@ -1,7 +1,7 @@
 var results = document.getElementsByClassName('post_results');
 
 function resizeY() {
-    var height = window.innerHeight - 90;
+    var height = window.innerHeight - 188;
     for(var k = 0; k < results.length; k++) {
         results[k].style.height = height+'px';
     }    
