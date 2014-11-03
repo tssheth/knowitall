@@ -7,7 +7,7 @@
   "minimum_chrome_version": "20",
 
   "chrome_url_overrides" : {
-    "newtab": "start.html"
+    "newtab": "home.html"
   },
   "permissions": [
     "storage",
