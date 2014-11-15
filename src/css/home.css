@@ -2,7 +2,16 @@
 YHack 2014
 */
 
-body{background:#F7393B;margin:0;padding:0}
+body {
+    background-image: url('../images/background.png');
+    background-color: black;
+    background-size: inherit;
+    margin:0;
+    padding:0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center; 
+}
 
 #h1 {
     margin-top: 24px;
