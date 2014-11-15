@@ -5,7 +5,7 @@ YHack 2014
 body {
     background-image: url('../images/background.png');
     background-color: black;
-    background-size: inherit;
+    background-size: cover;
     margin:0;
     padding:0;
     background-repeat: no-repeat;
