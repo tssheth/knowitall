@@ -9,6 +9,10 @@
   "chrome_url_overrides" : {
     "newtab": "home.html"
   },
+  "browser_action": {
+    "default_icon": "flow.png",
+    "default_popup": "popup.html"
+  },
   "permissions": [
     "storage",
     "tabs",

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <title>Toolkit</title>
+    <script src="javascript/convert.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+</head>
+<body>
+    <div id="container">
+        <a href="#" id="hexBinDecLink" class="tableOfContentsLink">Binary, Hexadecimal, and Decimal Converter</a>
+        <div id="hexBinDec" class="contents">
+            <table style="width:100%">
+              <tr>
+                <td>Decimal</td>
+                <td><input type="text" id="decimal"></td> 
+              </tr>
+              <tr>
+                <td>Hex</td>
+                <td><input type="text" id="hex"></td>
+              </tr>
+              <tr>
+                <td>Binary</td>
+                <td><input type="text" id="binary"></td>
+              </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
