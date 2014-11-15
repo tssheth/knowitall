@@ -16,19 +16,17 @@ function selected(array) {
     return false;
 }
 
-function tryAgain() {
-    
-}
+//function tryAgain() {
+//    
+//}
 
 function getNonNormal() {
     var urls = new Array();
     document.getElementById("genericInputMaster").setAttribute("class", "hidden");
-    var nonNormal = document.getElementsByClassName("genericInput");
-    for (var i = 0; i < nonNormal.length + 15; i++) {
-        var current = nonNormal[i];
-        if (current !== null) {
-            urls[urls.length] = current;
-        }
+    var nonNormal = document.getElementsByClassName("rssUrl");
+    for (var i = 0; i < nonNormal.length; i++) {
+        var current = nonNormal[i].value;
+        urls.push(current);
     }
     return urls;
 }
@@ -38,19 +36,20 @@ function save() {
     var sports = selected(sportsArray);
     var market = selected(marketArray);
     
-    if (news === false || sports === false || market === false) {
-        tryAgain();
-        return;
-    }
-    else {
-        var alienValues = getNonNormal();
-        var storage = chrome.storage.local;
-        
-        storage.set({"news": news});
-        storage.set({"sports": sports});
-        storage.set({"market": market});
-        storage.set({"userLists": alienValues});
-        
-        window.location.href = "home.html";
-    }
+    var alienValues = getNonNormal();
+    var storage = chrome.storage.local;
+
+    storage.set({"news": news});
+    storage.set({"sports": sports});
+    storage.set({"market": market});
+    storage.set({"userLists": alienValues}); 
 }
+
+function saveHandler(element) {
+    setTimeout(save, 10);
+    window.location.replace("home.html");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+   document.querySelector('#save').addEventListener('click', saveHandler); 
+});
