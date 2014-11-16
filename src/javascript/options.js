@@ -12,19 +12,20 @@ function selected(array) {
     return false;
 }
 
-//function tryAgain() {
-//    
-//}
-
 function getNonNormal() {
     var urls = new Array();
-    document.getElementById("genericInputMaster").setAttribute("class", "hidden");
-    var nonNormal = document.getElementsByClassName("rssUrl");
-    for (var i = 0; i < nonNormal.length; i++) {
-        var current = nonNormal[i].value;
-        urls.push(current);
+    for (var i = 1; i <= 3; i++) {
+        var currentUrl = document.getElementById("text" + i).value;
+        urls.push(currentUrl);
     }
     return urls;
+//    document.getElementById("genericInputMaster").setAttribute("class", "hidden");
+//    var nonNormal = document.getElementsByClassName("rssUrl");
+//    for (var i = 0; i < nonNormal.length; i++) {
+//        var current = nonNormal[i].value;
+//        urls.push(current);
+//    }
+//    return urls;
 }
 
 function save() {
@@ -44,11 +45,6 @@ function save() {
     storage.set({"market": market});
     storage.set({"userLists": alienValues}); 
     
-//    var test = "";
-//    storage.get("userChoice", function(result) {
-//        test = result.userChoice;
-//        alert(test);
-//    });
 }
 
 function fillInTheBlank() {
@@ -75,6 +71,14 @@ function fillInTheBlank() {
             document.getElementById("market").value = market;
         }
     });
+
+    var list = new Array();
+    chrome.storage.local.get("userLists", function(result) {
+        list = result.userLists;
+        for(var i = 0; i < 3; i++) {
+            document.getElementById("text" + (i + 1)).value = list[i];
+        }
+    });
 }
 
 function saveHandler(element) {
@@ -82,9 +86,9 @@ function saveHandler(element) {
 //    window.location.replace("home.html");
 }
 
-document.onload =  function() {
+window.onload =  function() {
     fillInTheBlank();
-}
+};
 
 document.addEventListener("DOMContentLoaded", function() {
    document.querySelector('#save').addEventListener('click', saveHandler); 
