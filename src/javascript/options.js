@@ -45,11 +45,6 @@ function save() {
     storage.set({"market": market});
     storage.set({"userLists": alienValues}); 
     
-//    var test = "";
-//    storage.get("userChoice", function(result) {
-//        test = result.userChoice;
-//        alert(test);
-//    });
 }
 
 function fillInTheBlank() {
@@ -80,8 +75,8 @@ function fillInTheBlank() {
     var list = new Array();
     chrome.storage.local.get("userLists", function(result) {
         list = result.userLists;
-        for(var i = 0; i <= 3; i++) {
-            document.getElementById("text" + (i + 1)).value = list[i + 1];
+        for(var i = 0; i < 3; i++) {
+            document.getElementById("text" + (i + 1)).value = list[i];
         }
     });
 }

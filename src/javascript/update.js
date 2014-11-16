@@ -95,7 +95,7 @@ function updateOthers() {
         }
         if(counter !== 1) {
             for (var i = 1; i <= counter; i++) {
-                var currentUrl = array[i + 1];
+                var currentUrl = array[i];
                 setColumns(1);
                 document.getElementById("usersub" + i).style.display = "inline-block";
                 document.getElementById("user" + i).setAttribute("rss_url", currentUrl);
@@ -103,7 +103,7 @@ function updateOthers() {
         }
         else {
             document.getElementById("usersub1").style.display = "inline-block";
-            document.getElementById("user1")
+            document.getElementById("user1").setAttribute("rss_url", currentUrl);
         }
     });
 }
@@ -113,5 +113,5 @@ function update() {
     updateSports();
     updateMarket();
     updateOthers();
-    setColumnsFinal();
+//    setColumnsFinal();
 }
