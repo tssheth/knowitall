@@ -24,5 +24,5 @@ window.onload = function() {
        if (choice !== null) {
            window.location.replace("home.html");
        }
-    })
+    });
 };
