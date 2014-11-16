@@ -51,9 +51,39 @@ function save() {
 //    });
 }
 
+function fillInTheBlank() {
+    var news = "";
+    chrome.storage.local.get("news", function(results) {
+        news = results.news;
+        if(news !== "none" ||  news !== "Select News Network" || news !== false) {
+            document.getElementById("news").value = news;
+        }
+    });
+    
+    var sports = "";
+    chrome.storage.local.get("sports", function(results) {
+       sports = results.sports;
+       if(sports !== "none" ||  sports !== "Select News Network" || sports !== false) {
+            document.getElementById("sports").value = sports;
+        }
+    });
+    
+    var market = "";
+    chrome.storage.local.get("market", function(results) {
+       market = results.market;
+       if(market !== "none" ||  market !== "Select News Network" || market !== false) {
+            document.getElementById("market").value = market;
+        }
+    });
+}
+
 function saveHandler(element) {
     setTimeout(save, 0);
 //    window.location.replace("home.html");
+}
+
+document.onload =  function() {
+    fillInTheBlank();
 }
 
 document.addEventListener("DOMContentLoaded", function() {
