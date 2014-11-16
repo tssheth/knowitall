@@ -1,0 +1,88 @@
+/*
+YHack 2014
+*/
+
+::-webkit-scollbar {
+    display: none;
+}
+
+html {
+    background-image: url('../images/background.png');
+    background-color: black;
+    background-size: cover;
+    margin:0;
+    padding:0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center; 
+    margin-top: 40px;
+    padding-top: 60px;
+}
+
+#h1 {
+    text-align: center;
+    text-transform: lowercase;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 49px;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    margin-top: -80px;
+    text-shadow: 0px 5.8px 7px #F7393B;
+}
+
+body {
+/*    background: white;*/
+    margin:0;
+    padding:0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    overflow: scroll;
+    /*border-radius: 12px;*/
+    text-align: center;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    color: #535353;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 3px 14px 1px #F7393B;
+}
+
+#h2 {
+    color: #3C3C3C;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#fail {
+    display: none;
+}
+
+#genericInputMaster {
+    display: none;
+}
+
+#addAnotherForm {
+    display:block;
+    margin:0px auto;
+}
+
+#save {
+    display:block;
+    margin:0px auto;
+}
+
+#your {
+    color: #F7393B;
+}
