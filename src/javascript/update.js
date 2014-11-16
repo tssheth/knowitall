@@ -64,8 +64,31 @@ function updateMarket(){
     });
 }
 
+function updateOthers() {
+    var choice = '';
+    storage.get("userLists", function(results) {
+        var array = results.userLists;
+        
+        if(array.length > 3) {
+            var counter = 3;
+        }
+        else {
+            counter = array.length;
+        }
+        if(counter !== 1) {
+            for (var i = 0; i < counter; i++) {
+                var currentUrl = array[i + 1];
+
+                document.getElementById("usersub" + i).style.display = "inline-block";
+                document.getElementById("user" + i).setAttribute("rss_url", currentUrl);
+            }    
+        }
+    });
+}
+
 function update() {    
     updateNews();
     updateSports();
     updateMarket();
+    updateOthers();
 }
