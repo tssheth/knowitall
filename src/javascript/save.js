@@ -38,16 +38,23 @@ function save() {
     
     var alienValues = getNonNormal();
     var storage = chrome.storage.local;
-
+    
+    storage.set({"userChoice": "true"});
     storage.set({"news": news});
     storage.set({"sports": sports});
     storage.set({"market": market});
     storage.set({"userLists": alienValues}); 
+    
+//    var test = "";
+//    storage.get("userChoice", function(result) {
+//        test = result.userChoice;
+//        alert(test);
+//    });
 }
 
 function saveHandler(element) {
     setTimeout(save, 10);
-    window.location.replace("home.html");
+//    window.location.replace("home.html");
 }
 
 document.addEventListener("DOMContentLoaded", function() {
