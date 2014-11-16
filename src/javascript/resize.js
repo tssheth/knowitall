@@ -29,7 +29,36 @@ function resizeX() {
     }
 }
 
+//function resizeMaster() {
+//    var counter = 0;
+//    
+//    if(document.getElementById("newsSub").style.display !== "none") {
+//        counter++;
+//    }
+//    if(document.getElementById("sportssSub").style.display !== "none") {
+//        counter++;
+//    }
+//    if(document.getElementById("marketSub").style.display !== "none") {
+//        counter++;
+//    }
+//    
+//    var subs = document.getElementsByClassName("subcontainer");
+//    
+//    for(var j = 0; j < subs.length; j++) {
+//        if(subs[j].style.display !== "none") {
+//            counter++;
+//        }
+//    }
+//    if(counter > 3) {
+//        for(var l = 0; l < subs.length; l++) {
+//            var height = (window.innerHeight - 188) / 2;
+//            subs[l].style.height = height+'px';
+//        }
+//    }
+//}
+
 function resize() {
     resizeY();
     resizeX();
+//    resizeMaster();
 }
