@@ -66,11 +66,9 @@ function updateMarket(){
 
 function update() {    
     updateNews();
+    alert("News");
     updateSports();
+    alert("Sports");
     updateMarket();
-}
-
-window.onload = function() {
-    alert ("Swaggar muffin");
-    update();
+    alert("Market");
 }
