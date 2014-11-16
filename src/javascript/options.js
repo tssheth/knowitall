@@ -18,7 +18,6 @@ function getNonNormal() {
         var currentUrl = document.getElementById("text" + i).value;
         urls.push(currentUrl);
     }
-    alert(urls);
     return urls;
 //    document.getElementById("genericInputMaster").setAttribute("class", "hidden");
 //    var nonNormal = document.getElementsByClassName("rssUrl");
@@ -80,10 +79,9 @@ function fillInTheBlank() {
 
     var list = new Array();
     chrome.storage.local.get("userLists", function(result) {
-        list = result.userLists
+        list = result.userLists;
         for(var i = 0; i <= 3; i++) {
-            document.getElementById("text" + i).value = list[i + 1];
-            alert(list[i+1]);
+            document.getElementById("text" + (i + 1)).value = list[i + 1];
         }
     });
 }

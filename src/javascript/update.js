@@ -1,7 +1,3 @@
-/* 
- * YHack 2014
- */
-
 var storage = chrome.storage.local;
 
 var links = new Array();
@@ -76,12 +72,16 @@ function updateOthers() {
             counter = array.length;
         }
         if(counter !== 1) {
-            for (var i = 0; i < counter; i++) {
+            for (var i = 1; i <= counter; i++) {
                 var currentUrl = array[i + 1];
 
                 document.getElementById("usersub" + i).style.display = "inline-block";
                 document.getElementById("user" + i).setAttribute("rss_url", currentUrl);
             }    
+        }
+        else {
+            document.getElementById("usersub1").style.display = "inline-block";
+            document.getElementById("user1")
         }
     });
 }
