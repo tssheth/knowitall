@@ -10,7 +10,7 @@
     "newtab": "start.html"
   },
   "browser_action": {
-    "default_icon": "flow.png",
+    "default_icon": "images/logo.png",
     "default_popup": "popup.html"
   },
   "permissions": [
