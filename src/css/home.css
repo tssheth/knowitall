@@ -31,11 +31,11 @@ h1 {
 /*.post_results1 {*/
 .subcontainer {
     overflow: scroll;
-    margin: 5px;
     margin-top: 0px;
+    marign-bottom: 5px;
     width: 350px;
     border:2px #FFF;
-    height: 400px;
+    height: 435px;
     border-radius: 9px;
     border-style: solid;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
