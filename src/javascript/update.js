@@ -29,8 +29,8 @@ function updateNews() {
     var choice = "";
     storage.get("news", function(result) {
         choice = result.news;
-        if(choice === "none" ||  choice == "Select News Network") {
-            document.getElementById("news").style.display = "none";
+        if(choice === "none" ||  choice == "Select News Network" || choice === false) {
+            document.getElementById("newsSub").style.display = "none";
         }
         else {
             document.getElementById('news').setAttribute("rss_url", links[choice]);
@@ -42,8 +42,8 @@ function updateSports() {
     var choice = "";
     storage.get("sports", function(result) {
         choice = result.sports;
-        if(choice === "none" ||  choice == "Select Sports Network") {
-            document.getElementById("sports").style.display = "none";
+        if(choice === "none" ||  choice == "Select Sports Network" || choice === false) {
+            document.getElementById("sportsSub").style.display = "none";
         }
         else {
             document.getElementById('sports').setAttribute("rss_url", links[choice]);
@@ -55,8 +55,8 @@ function updateMarket(){
     var choice = "";
     storage.get("market", function(result) {
         choice = result.market;
-        if(choice === "none" ||  choice == "Select Market Network") {
-            document.getElementById("market").style.display = "none";
+        if(choice === "none" ||  choice == "Select Market Network" || choice === false) {
+            document.getElementById("marketSub").style.display = "none";
         }
         else {
             document.getElementById('market').setAttribute("rss_url", links[choice]);

@@ -39,6 +39,9 @@ function save() {
     var alienValues = getNonNormal();
     var storage = chrome.storage.local;
     
+    // Clears local storage...ADDRESS IT
+    storage.clear();
+    
     storage.set({"userChoice": "true"});
     storage.set({"news": news});
     storage.set({"sports": sports});
@@ -53,7 +56,7 @@ function save() {
 }
 
 function saveHandler(element) {
-    setTimeout(save, 10);
+    setTimeout(save, 0);
 //    window.location.replace("home.html");
 }
 

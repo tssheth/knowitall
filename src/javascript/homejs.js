@@ -84,9 +84,13 @@ var rssReader = {
     }
 };
 
+function reader() {
+    rssReader.init('post_results');
+}
+
 window.onload = function() {
     update();
-    rssReader.init('post_results');
+    setTimeout(reader, 1000);
     resize();
 }
 
