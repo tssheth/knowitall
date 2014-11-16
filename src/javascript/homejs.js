@@ -2,6 +2,10 @@
  * YHack 2014
  */
 
+function getSavedData() {
+    
+}
+
 function myGetElementsByClassName(selector) {
     if ( document.getElementsByClassName ) {
         return document.getElementsByClassName(selector);
