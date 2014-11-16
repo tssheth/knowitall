@@ -100,12 +100,17 @@ function updateOthers() {
         else {
             counter = array.length;
         }
-        
-        for (var i = 0; i < counter; i++) {
-            var currentUrl = array[i];
-//          setColumns(1);
-            document.getElementById("usersub" + (i)).style.display = "inline-block";
-            document.getElementById("user" + (i)).setAttribute("rss_url", currentUrl);
+        if(counter !== 1 || counter !== 0) {
+            for (var i = 0; i < counter; i++) {
+                var currentUrl = array[i];
+    //          setColumns(1);
+                document.getElementById("usersub" + (i)).style.display = "inline-block";
+                document.getElementById("user" + (i)).setAttribute("rss_url", currentUrl);
+            }
+        }
+        else {
+            document.getElementById("usersub" + (0)).style.display = "inline-block";
+            document.getElementById("user" + (0)).setAttribute("rss_url", array[0]);
         }
     });
 }
