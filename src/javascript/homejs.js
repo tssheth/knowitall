@@ -1,11 +1,3 @@
-/* 
- * YHack 2014
- */
-
-function getSavedData() {
-    
-}
-
 function myGetElementsByClassName(selector) {
     if ( document.getElementsByClassName ) {
         return document.getElementsByClassName(selector);
@@ -88,6 +80,14 @@ function reader() {
     rssReader.init('post_results');
 }
 
+function toSettings() {
+    chrome.storage.local.set({"change": "y"});
+}
+
+function toSettingsHandler() {
+    setTimeout(toSettings, 10);
+}
+
 window.onload = function() {
     update();
     setTimeout(reader, 1000);
@@ -96,4 +96,8 @@ window.onload = function() {
 
 window.addEventListener('resize', function(event){
     resize();
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector("#settings").addEventListener('click', toSettingsHandler); 
 });
