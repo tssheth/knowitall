@@ -25,6 +25,7 @@ h1 {
     font-size: 49px;
     font-weight: normal;
     letter-spacing: 0.05em;
+    text-shadow: 0px 6px 9px #F7393B;
 }
 
 .post_results {
@@ -93,6 +94,13 @@ h1 {
     margin-left: 40px;
     margin-right: 40px;
 }
+/*.loading {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+}
+*/
 #img {
     width: 50px;
     height: 50px;
