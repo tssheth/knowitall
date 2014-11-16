@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>knowitall Options</title>
+    <meta charset="UTF-8">
+    <link href="css/options.css" rel="stylesheet" type="text/css"/>
+    <script src="javascript/options.js" type="text/javascript"></script>
+</head>
+<body>
+        <h1 id="h1">knowitall</h1>
+        <div class="container">
+            <h2 id="h2">Choose <span id="your">your</span> news.</h2>
+            <span class="failure" id="fail">Please select all of the fields.</span>
+            <div id="forms">
+                <div class="input">
+                    <p>Select News Network</p>
+                    <select id="news" class="select">
+                        <option class="select">Select News Network</option>
+                        <option id="cnn">CNN</option>
+                        <option id="bbc">BBC News</option>
+                        <option id="nyt">New York Times</option>
+                        <option id="yahoonews">Yahoo News</option>
+                        <option id="fox">Fox News</option>
+                        <option id="googlenews">Google News</option>
+                        <option id="none">None</option>
+                    </select>
+                </div>
+                <br>
+                <div class="input">  
+                    <p>Select Sports Network</p>
+                    <select id="sports" class="select">
+                        <option class="select">Select Sports Network</option>
+                        <option id="espn">ESPN</option>
+                        <option id="yahoosports">Yahoo Sports</option>
+                        <option id="mlb">MLB</option>
+                        <option id="nfl">NFL</option>
+                        <option id="nba">NBA</option>
+                        <option id="nhl">NHL</option>
+                        <option id="none">None</option>
+                    </select>
+                </div>
+                <br>
+                <div class="input">
+                    <p>Select Stock Market Network</p>
+                    <select id="market" class="select">
+                        <option class="select">Select Stock Market Network</option>
+                        <option id="cnnmoney">CNN Money</option>
+                        <option id="yahoofinance">Yahoo Finance</option>
+                        <option id="cnbc">CNBC</option>
+                        <option id="forbes">Forbes</option>
+                        <option id="marketwatch">MarketWatch</option>
+                        <option id="none">None</option>
+                    </select>
+                </div>
+                <br>
+                <!--<div class="genericInput" id="genericInputMaster">
+                    RSS Address: <input type="text" name="input" class="rssUrl">&nbsp;
+                    <button id="remove" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Remove RSS feed</button>
+                    <br>
+                </div>-->
+                RSS Address: <input type="text" name="input" class="rssUrl"><br/>
+                RSS Address: <input type="text" name="input" class="rssUrl"><br/>
+                RSS Address: <input type="text" name="input" class="rssUrl"><br/>
+                <span id="write"></span>
+                <br>
+                <br>
+                <div id="buttons">
+                    <!--onclick="moreForms()"-->
+                    <br />
+                    <a href="home.html"><button id="save">Save Preferences</button></a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </body>
+</html>
