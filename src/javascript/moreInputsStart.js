@@ -20,4 +20,10 @@ function moreForms() {
     insertHere.parentNode.insertBefore(newFields, insertHere);
 }
 
-window.onload = moreForms;
+function moreFormsHandler(element) {
+    setTimeout(moreForms, 10);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+   document.querySelector('#addAnotherForm').addEventListener('click', moreFormsHandler); 
+});

@@ -3,19 +3,26 @@
  */
 
 function checkForData() {
-    var storage = chrome.storage.local.get('news', function(result) {
-        decider = result.news;
-        if (decider === null) {
-            return false;
+    var choice = "";
+    var decider = false;
+    
+    chrome.storage.local.get("userChoice", function(result) {
+        choice = result.userChoice;
+        if(choice !== "") {
+            return true;
         }
         else {
-            return true;
+            return false;
         }
     });
 }
 
 window.onload = function() {
-    if(checkForData() === true) {
-        window.location.replace("home.html");
-    }
-}
+    var choice = "";
+    chrome.storage.local.get("userChoice", function(result) {
+       choice = result.userChoice;
+       if (choice !== null) {
+           window.location.replace("home.html");
+       }
+    })
+};
