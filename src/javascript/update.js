@@ -27,8 +27,15 @@ var selectors = document.getElementsByClassName('select');
 var columns = 3;
 
 function setColumns(change) {
-    elements = document.getElementsByClassName("subcontainer" + columns);
+//    elements = document.getElementsByClassName("subcontainer" + columns);
     columns += change
+//    for (var i = 0; i < elements.length; i++) {
+//        elements[i].class = "subcontainer" + columns;
+//    }
+}
+
+function setColumnsFinal() {
+    elements = document.getElementsByClassName("subcontainer" + columns);
     for (var i = 0; i < elements.length; i++) {
         elements[i].class = "subcontainer" + columns;
     }
@@ -106,4 +113,5 @@ function update() {
     updateSports();
     updateMarket();
     updateOthers();
+    setColumnsFinal();
 }
