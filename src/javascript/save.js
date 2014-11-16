@@ -1,3 +1,7 @@
+/* 
+ * YHack 2014
+ */
+
 var newsArray = new Array("cnn", "bbc", "nyt", "yahoonews", "fox", "googlenews", "none");
 var sportsArray = new Array("espn", "yahoosports", "mlb", "nfl", "nba", "nhl", "none");
 var marketArray = new Array("cnnmoney", "yahoofinance", "cnbc", "forbes", "marketwatch", "none");
