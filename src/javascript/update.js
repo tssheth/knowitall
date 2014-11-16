@@ -66,9 +66,6 @@ function updateMarket(){
 
 function update() {    
     updateNews();
-    alert("News");
     updateSports();
-    alert("Sports");
     updateMarket();
-    alert("Market");
 }
