@@ -28,7 +28,8 @@ h1 {
     text-shadow: 0px 5.8px 7px #F7393B;
 }
 
-.post_results {
+/*.post_results1 {*/
+.subcontainer {
     overflow: scroll;
     margin: 5px;
     margin-top: 0px;
