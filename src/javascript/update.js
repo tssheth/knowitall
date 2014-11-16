@@ -83,14 +83,14 @@ function updateMarket(){
 }
 
 function updateOthers() {
-    var choice = '';
+    var array = "";
     storage.get("userLists", function(results) {
         var array = results.userLists;
         
         for(var i = 0; i < array.length; i++) {
             var currentElement = array[i];
-            if(currentElement === "" || curentElement === "undefined") {
-                delete array.currentElement;
+            if(currentElement === "" || currentElement === "null" || currentElement === "undefined") {
+                delete array[currentElement];
             }
         }
         
@@ -100,17 +100,12 @@ function updateOthers() {
         else {
             counter = array.length;
         }
-        if(counter !== 1) {
-            for (var i = 0; i <= counter; i++) {
-                var currentUrl = array[i];
-//                setColumns(1);
-                document.getElementById("usersub" + (i)).style.display = "inline-block";
-                document.getElementById("user" + (i)).setAttribute("rss_url", currentUrl);
-            }    
-        }
-        else {
-            document.getElementById("usersub1").style.display = "inline-block";
-            document.getElementById("user1").setAttribute("rss_url", currentUrl);
+        
+        for (var i = 0; i < counter; i++) {
+            var currentUrl = array[i];
+//          setColumns(1);
+            document.getElementById("usersub" + (i)).style.display = "inline-block";
+            document.getElementById("user" + (i)).setAttribute("rss_url", currentUrl);
         }
     });
 }

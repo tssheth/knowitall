@@ -17,10 +17,10 @@ function counterToColumns(counter) {
             resizeColumns(65, 5);
             break;
         case 2:
-            resizeColumns(40, 2.5);
+            resizeColumns(40, 1.75);
             break;
         case 3:
-            resizeColumns(27.333, 2.5);
+            resizeColumns(27.333, 0.5);
             break;
         case 4:
             resizeColumns(20, 2);
