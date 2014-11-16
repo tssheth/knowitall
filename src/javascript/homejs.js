@@ -91,11 +91,11 @@ function toSettingsHandler() {
 window.onload = function() {
     update();
     setTimeout(reader, 1000);
-//    resize();
+    setTimeout(resize, 1200);
 }
 
 window.addEventListener('resize', function(event){
-//    resize();
+    resize();
 });
 
 document.addEventListener("DOMContentLoaded", function() {

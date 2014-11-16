@@ -20,33 +20,33 @@ links['forbes'] = 'http://www.forbes.com/markets/feed/';
 links['marketwatch'] = 'http://feeds.marketwatch.com/marketwatch/topstories?format=xml';
 
 var selectors = document.getElementsByClassName('select');
-var columns = 3;
-
-function setColumns(change) {
+//var columns = 3;
+//
+//function setColumns(change) {
 //    elements = document.getElementsByClassName("subcontainer" + columns);
-    columns += change
+//    columns += change
 //    for (var i = 0; i < elements.length; i++) {
 //        elements[i].class = "subcontainer" + columns;
 //    }
-}
+//}
 
-function setColumnsFinal() {
-    elements = document.getElementsByClassName("subcontainer" + columns);
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].class = "subcontainer" + columns;
-    }
-}
+//function setColumnsFinal() {
+//    elements = document.getElementsByClassName("subcontainer" + columns);
+//    for (var i = 0; i < elements.length; i++) {
+//        elements[i].class = "subcontainer" + columns;
+//    }
+//}
 
 function updateNews() {
     var choice = "";
     storage.get("news", function(result) {
         choice = result.news;
         if(choice === "none" ||  choice == "Select News Network" || choice === false) {
-            setColumns(-1);
+//            setColumns(-1);
             document.getElementById("newsSub").style.display = "none";
         }
         else {
-            setColumns(1);
+//            setColumns(1);
             document.getElementById('news').setAttribute("rss_url", links[choice]);
         }
     });
@@ -57,11 +57,11 @@ function updateSports() {
     storage.get("sports", function(result) {
         choice = result.sports;
         if(choice === "none" ||  choice == "Select Sports Network" || choice === false) {
-            setColumns(-1);
+//            setColumns(-1);
             document.getElementById("sportsSub").style.display = "none";
         }
         else {
-            setColumns(1);
+//            setColumns(1);
             document.getElementById('sports').setAttribute("rss_url", links[choice]);
         }
     });
@@ -72,11 +72,11 @@ function updateMarket(){
     storage.get("market", function(result) {
         choice = result.market;
         if(choice === "none" ||  choice == "Select Market Network" || choice === false) {
-            setColumns(-1);
+//            setColumns(-1);
             document.getElementById("marketSub").style.display = "none";
         }
         else {
-            setColumns(1);
+//            setColumns(1);
             document.getElementById('market').setAttribute("rss_url", links[choice]);
         }
     });
@@ -87,6 +87,13 @@ function updateOthers() {
     storage.get("userLists", function(results) {
         var array = results.userLists;
         
+        for(var i = 0; i < array.length; i++) {
+            var currentElement = array[i];
+            if(currentElement === "" || curentElement === "undefined") {
+                delete array.currentElement;
+            }
+        }
+        
         if(array.length > 3) {
             var counter = 3;
         }
@@ -96,7 +103,7 @@ function updateOthers() {
         if(counter !== 1) {
             for (var i = 0; i <= counter; i++) {
                 var currentUrl = array[i];
-                setColumns(1);
+//                setColumns(1);
                 document.getElementById("usersub" + (i)).style.display = "inline-block";
                 document.getElementById("user" + (i)).setAttribute("rss_url", currentUrl);
             }    

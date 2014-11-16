@@ -1,66 +1,54 @@
-var results = document.getElementsByClassName('post_results');
+var elements = document.getElementsByClassName("subcontainer");
 
-function resizeY() {
-    var height = window.innerHeight - 188;
+function resizeColumns(columnPercentage, marginPercentage) {
+    for(var j = 0; j < elements.length; j++) {
+        var currentElement = elements[j];
+        if(currentElement.style.display !== "none") {
+            currentElement.style.width = columnPercentage+'%';
+            currentElement.style.marginLeft = marginPercentage+'%';
+            currentElement.style.marginRight = marginPercentage+'%';
+        }
+    }
+}
+
+function counterToColumns(counter) {
+    switch(counter) {
+        case 1:
+            resizeColumns(65, 5);
+            break;
+        case 2:
+            resizeColumns(40, 2.5);
+            break;
+        case 3:
+            resizeColumns(27.333, 2.5);
+            break;
+        case 4:
+            resizeColumns(20, 2);
+            break;
+        case 5:
+            resizeColumns(14, 1.5);
+            break;
+        case 6:
+            resizeColumns(13.75, 1.25);
+            break;
+        default:
+            break;
+    }   
+}
+
+function resizeCalibrate() {
     var counter = 0;
     
-    for(var i = 0; i < results.length; i++) {
-        if(results[i].style.display !== "none") {
+    for(var i = 0; i < elements.length; i++) {
+        var currentElement = elements[i];
+        if (currentElement.style.display !== "none") {
             counter++;
         }
     }
-    
-//    if(counter < 4) {
-        for(var k = 0; k < results.length; k++) {
-            results[k].style.height = height+'px';
-        }  
-//    }
-//    if(counter => 4) {
-//        for(var j = 0; j < results.length; j++) {
-//            results[j].style.height = (height)/2+'px';
-//        }
-//    }
-//    counter = 0;
-}
-
-//function resizeX() {
-//    var container = document.getElementById('container');
-//    var width = window.innerWidth;
-//    var listItems = document.getElementsByTagName('li');
-//    
-//    if(width < 1165) {
-//        for(var i = 0; i < listItems.length; i++) {
-//            listItems[i].style.height = '85px';
-//            
-//            results[i].style.width = '280px';
-//            results[i].style.height = '350px';
-//        }
-//    }
-//    if(width >= 1165) {
-//       for(var i = 0; i < listItems.length; i++) {
-//            listItems[i].style.height = '60px';
-//            
-//            results[i].style.width = '350px';
-//        } 
-//    }
-//}
-
-function resizeMaster() {
-    var width = window.innerWidth;
-    var numberOfResults = results.length;
-    if(numberOfResults > 4) {
-        numberOfResults = 4;
-    }
-    else {
-        netWidth = width - (80*numberOfResults);
-        for(var i = 0; i < numberOfResults; i++) {
-            results[i].style.width = netWidth / numberOfResults;
-        }
-    }
+        
+    counterToColumns(counter);
 }
 
 function resize() {
-    resizeY();
-//    resizeX();
-    resizeMaster();
+    resizeCalibrate();
 }
