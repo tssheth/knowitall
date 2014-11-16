@@ -2,6 +2,10 @@
  * YHack 2014
  */
 
+function getSavedData() {
+    
+}
+
 function myGetElementsByClassName(selector) {
     if ( document.getElementsByClassName ) {
         return document.getElementsByClassName(selector);
@@ -81,6 +85,7 @@ var rssReader = {
 };
 
 window.onload = function() {
+    update();
     rssReader.init('post_results');
     resize();
 }

@@ -2,6 +2,8 @@
  * YHack 2014
  */
 
+var storage = chrome.storage.local;
+
 var links = new Array();
 links['cnn'] = 'http://rss.cnn.com/rss/cnn_topstories.rss';
 links['bbc'] = 'http://feeds.bbci.co.uk/news/rss.xml?edition=us';
@@ -24,20 +26,51 @@ links['marketwatch'] = 'http://feeds.marketwatch.com/marketwatch/topstories?form
 var selectors = document.getElementsByClassName('select');
 
 function updateNews() {
-    var choice = document.getElementById('newsSelect').selectedIndex;
-    document.getElementById("news").setAttribute("rss_url", links[choice]);
-    alert(choice);   
+    var choice = "";
+    storage.get("news", function(result) {
+        choice = result.news;
+        if(choice === "none" ||  choice == "Select News Network") {
+            document.getElementById("news").style.display = "none";
+        }
+        else {
+            document.getElementById('news').setAttribute("rss_url", links[choice]);
+        }
+    });
 }
 
 function updateSports() {
-    
+    var choice = "";
+    storage.get("sports", function(result) {
+        choice = result.sports;
+        if(choice === "none" ||  choice == "Select Sports Network") {
+            document.getElementById("sports").style.display = "none";
+        }
+        else {
+            document.getElementById('sports').setAttribute("rss_url", links[choice]);
+        }
+    });
 }
 
 function updateMarket(){
-    
+    var choice = "";
+    storage.get("market", function(result) {
+        choice = result.market;
+        if(choice === "none" ||  choice == "Select Market Network") {
+            document.getElementById("market").style.display = "none";
+        }
+        else {
+            document.getElementById('market').setAttribute("rss_url", links[choice]);
+        }
+    });
 }
 
 function update() {    
-     
+    updateNews();
+    updateSports();
+    updateMarket();
 }
 
+window.onload = function() {
+    alert ("Swaggar muffin");
+    update();
+}
