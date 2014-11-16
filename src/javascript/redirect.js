@@ -18,11 +18,11 @@ function checkForData() {
 }
 
 window.onload = function() {
-    var choice = "";
-    chrome.storage.local.get("userChoice", function(result) {
-       choice = result.userChoice;
-       if (choice !== null) {
-           window.location.replace("home.html");
-       }
-    });
+//    var choice = "";
+//    chrome.storage.local.get("userChoice", function(result) {
+//       choice = result.userChoice;
+//       if (choice !== null) {
+//           window.location.replace("home.html");
+//       }
+//    });
 };
