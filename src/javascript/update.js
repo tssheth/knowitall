@@ -71,5 +71,6 @@ function update() {
 }
 
 window.onload = function() {
+    alert ("Swaggar muffin");
     update();
 }
